@@ -1,10 +1,10 @@
-## Webpack4 全面整理笔记（2019/8/15）—— 小鹿
+## Webpack4 全面整理笔记（2019/8/15）—— 小鹿 :grinning:
 
 [TOC]
 
 
 
-## Webpack
+## :hash: Webpack
 
 `webpack` 是一款强大的模块加载器兼打包工具，他能把各种资源，例如 `JS（JSX）`、样式（`less/sass`）、图片都作为模块使用和处理。优势如下：
 
@@ -18,7 +18,7 @@
 
 
 
-## 1. webpack 命令行
+## #️⃣ 1. webpack 命令行
 
 ### 1.1 全局安装 webpack
 
@@ -58,7 +58,7 @@ webpack index.js -o bundle.js -参数
 
 
 
-## 2. 使用 webpack 配置文件
+## #️⃣ 2. 使用 webpack 配置文件
 
 ### 2.1 初始化 git
 
@@ -174,7 +174,7 @@ npm run build  // 此时程序会去 node_module 文件中去查找，如果找�
 
 
 
-## 3. loader
+## #️⃣ 3. loader
 
 `loader` 就是一个加载器，`webpack` 就通过加载器来将文件进行打包的。使用 `babel-loader` 来解析 `es6` 写成的模块。
 
@@ -266,7 +266,7 @@ module: {
 
 
 
-## 4. devServer
+## #️⃣ 4. devServer
 
 `webpack-dev-server` 是一个 `Web` 服务器，可以预览项目，并且当修改源码后可以实时刷新页面 server 配置。
 
@@ -344,7 +344,7 @@ function rewriteUrl(replacePath){
 
 
 
-## 5. resolve 解析
+## #️⃣ 5. resolve 解析
 
 ### 5.1 extension
 
@@ -444,7 +444,7 @@ resolve: {
 
 
 
-## 6. 解析 less 样式文件
+## #️⃣ 6. 解析 less 样式文件
 
 ### 6.1 安装 loader
 
@@ -494,7 +494,7 @@ $('#app').html(str)
 
 
 
-## 7. 资源文件的加载
+## #️⃣ 7. 资源文件的加载
 
 实现 css、图标、图片等资源文件加载
 
@@ -560,7 +560,7 @@ document.body.appendChild(img)
 
 
 
-## 8. 自动刷新
+## #️⃣ 8. 自动刷新
 
 在源码修改之后可以自动刷新页面  修改 `webpack.config.js`
 
@@ -572,7 +572,7 @@ document.body.appendChild(img)
 
 
 
-## 9. 自动产出 html
+## #️⃣ 9. 自动产出 html
 
 ### 9.1 创建 html 模板文件
 
@@ -603,7 +603,7 @@ plugins: [
 
 
 
-## 10. 自动打开浏览器
+## #️⃣ 10. 自动打开浏览器
 
 ### 10.1 安装插件
 
@@ -623,7 +623,7 @@ new OpenBrowerWebpackPlugin({
 
 
 
-## 11. 暴露全局对象
+## #️⃣ 11. 暴露全局对象
 
 ### 11.1 安装暴露组件
 
@@ -655,7 +655,7 @@ npm install expose-loader --save-dev
 
 
 
-## 13、CSS 文件的单独加载
+## #️⃣ 13、CSS 文件的单独加载
 
 ### 13.1 安装插件
 
@@ -688,7 +688,7 @@ new MiniCssExtractPlugin({
 
 
 
-## 14. 提取公共代码和应用代码和第三方代码分离
+## #️⃣ 14. 提取公共代码和应用代码和第三方代码分离
 
 > ```
 > 项目中分别有a.js, b.js, page1.js, page2.js这四个JS文件， page1.js 和 page2.js中同时都引用了a.js, b.js， 这时候想把a.js, b.js抽离出来合并成一个公共的js，然后在page1, page2中自动引入这个公共的js，怎么配置呢？
@@ -727,7 +727,7 @@ new MiniCssExtractPlugin({
 
 
 
-## 15. 添加哈希值
+## #️⃣ 15. 添加哈希值
 
 > 避免缓存问题，哈希值不同，缓存将重新存取数据。
 
@@ -739,7 +739,7 @@ file-name: '[name].[hash].js'
 
 
 
-## 16. 压缩资源
+## #️⃣ 16. 压缩资源
 
 ### 16.1 html 代码压缩
 
